@@ -3,6 +3,7 @@
 
 import React from "react";
 import UserInfor from "./UserInfor";
+import DisplayInfor from "./DisplayInfor"
 class MyComponent extends React.Component {
 
 
@@ -11,6 +12,10 @@ class MyComponent extends React.Component {
 
             <div>
                 <UserInfor />
+                <DisplayInfor name="Tien Dat G" age="22" />
+
+                <hr />
+                <DisplayInfor name="Thuy Quynh" age={18} />
             </div >
         );
     }
