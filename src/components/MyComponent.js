@@ -2,17 +2,32 @@
 // function component
 
 import React from "react";
-class MyComponent extends React.Component{
-   
+class MyComponent extends React.Component {
+
+    state = {
+        name: 'Tien Dat',
+        address: 'Phu Cat Binh Dinh',
+        age: 22
+    }
     // JSX 
-    render(){
+    handleClick = (event) => {
+        console.log('Click me')
+        console.log('My name is', this.state.name)
+
+        this.setState({
+            name: 'Thuy Quynh'
+        })
+    }
+    render() {
         return (
-            
-            <div> my first component
-                { Math.random()}
+
+            <div>
+                My name is {this.state.name} and I'm from {this.state.address}
+
+                <button onClick={(event) => { this.handleClick(event) }}>Click me</button>
             </div>
         );
     }
 }
 
-export default MyComponent ;
+export default MyComponent;
