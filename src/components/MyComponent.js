@@ -8,6 +8,7 @@ class MyComponent extends React.Component {
 
 
     render() {
+        const MyArr = [1, 2, 3];
         return (
 
             <div>
@@ -15,7 +16,7 @@ class MyComponent extends React.Component {
                 <DisplayInfor name="Tien Dat G" age="22" />
 
                 <hr />
-                <DisplayInfor name="Thuy Quynh" age={18} />
+                <DisplayInfor name="Thuy Quynh" age={18} MyArr={MyArr} />
             </div >
         );
     }
